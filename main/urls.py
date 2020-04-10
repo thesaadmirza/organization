@@ -20,12 +20,11 @@ from organizations.backends import invitation_backend
 from accounts.views import home
 from django.conf.urls.static import static
 from django.conf import settings
+
 urlpatterns = [
                   path('', home),
                   path('admin/', admin.site.urls),
                   url(r'^accounts/', include('organizations.urls')),
                   url(r'^invitations/', include(invitation_backend().get_urls())),
-              ]
-
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL,
+                                                                                           document_root=settings.MEDIA_ROOT)
