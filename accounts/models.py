@@ -1,3 +1,11 @@
-from django.db import models
+from organizations.models import Organization, OrganizationUser
 
-# Create your models here.
+
+class Account(Organization):
+    class Meta:
+        proxy = True
+
+
+class AccountUser(OrganizationUser):
+    class Meta:
+        proxy = True

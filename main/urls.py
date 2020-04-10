@@ -26,4 +26,4 @@ urlpatterns = [
                   path('admin/', admin.site.urls),
                   url(r'^accounts/', include('organizations.urls')),
                   url(r'^invitations/', include(invitation_backend().get_urls())),
-              ] 
+              ]
