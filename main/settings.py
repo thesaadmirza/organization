@@ -70,6 +70,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'main.wsgi.application'
 
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'sarmad1305@gmail.com'
+EMAIL_HOST_PASSWORD = 'hzdxyvyhuueceyon'
+DEFAULT_FROM_EMAIL = 'Deximind Team <noreply@younii.com'
+
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
