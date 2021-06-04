@@ -1,5 +1,5 @@
 asgiref==3.2.7
-Django==3.0.3
+Django==3.1.9
 django-autoslug==1.9.6
 django-cors-headers==3.2.1
 django-organizations==1.1.2
